@@ -14,20 +14,20 @@ R683:687 LF.InductionTest Check <> mod
 R714:722 LF.Induction <> <> lib
 def 740:748 <> Unnamed_thm
 R745:748 Coq.Init.Logic <> True ind
-R895:902 LF.Induction <> mult_0_r prfax
+R895:902 LF.Induction <> mult_0_r thm
 R917:919 Coq.Init.Datatypes <> nat ind
 R927:929 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R923:925 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
 R922:922 LF.InductionTest <> n var
-R895:902 LF.Induction <> mult_0_r prfax
+R895:902 LF.Induction <> mult_0_r thm
 R917:919 Coq.Init.Datatypes <> nat ind
 R927:929 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R923:925 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
 R922:922 LF.InductionTest <> n var
-R982:989 LF.Induction <> mult_0_r prfax
+R982:989 LF.Induction <> mult_0_r thm
 def 992:1000 <> Unnamed_thm
 R997:1000 Coq.Init.Logic <> True ind
-R1079:1087 LF.Induction <> plus_n_Sm prfax
+R1079:1087 LF.Induction <> plus_n_Sm thm
 R1104:1106 Coq.Init.Datatypes <> nat ind
 R1118:1120 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R1109:1109 Coq.Init.Datatypes <> S constr
@@ -38,7 +38,7 @@ R1122:1124 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R1121:1121 LF.InductionTest <> n var
 R1125:1125 Coq.Init.Datatypes <> S constr
 R1127:1127 LF.InductionTest <> m var
-R1079:1087 LF.Induction <> plus_n_Sm prfax
+R1079:1087 LF.Induction <> plus_n_Sm thm
 R1104:1106 Coq.Init.Datatypes <> nat ind
 R1118:1120 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R1109:1109 Coq.Init.Datatypes <> S constr
@@ -49,10 +49,10 @@ R1122:1124 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R1121:1121 LF.InductionTest <> n var
 R1125:1125 Coq.Init.Datatypes <> S constr
 R1127:1127 LF.InductionTest <> m var
-R1179:1187 LF.Induction <> plus_n_Sm prfax
+R1179:1187 LF.Induction <> plus_n_Sm thm
 def 1190:1198 <> Unnamed_thm
 R1195:1198 Coq.Init.Logic <> True ind
-R1277:1285 LF.Induction <> plus_comm prfax
+R1277:1285 LF.Induction <> plus_comm thm
 R1302:1304 Coq.Init.Datatypes <> nat ind
 R1312:1314 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R1308:1310 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
@@ -61,7 +61,7 @@ R1311:1311 LF.InductionTest <> m var
 R1316:1318 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R1315:1315 LF.InductionTest <> m var
 R1319:1319 LF.InductionTest <> n var
-R1277:1285 LF.Induction <> plus_comm prfax
+R1277:1285 LF.Induction <> plus_comm thm
 R1302:1304 Coq.Init.Datatypes <> nat ind
 R1312:1314 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R1308:1310 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
@@ -70,10 +70,10 @@ R1311:1311 LF.InductionTest <> m var
 R1316:1318 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R1315:1315 LF.InductionTest <> m var
 R1319:1319 LF.InductionTest <> n var
-R1371:1379 LF.Induction <> plus_comm prfax
+R1371:1379 LF.Induction <> plus_comm thm
 def 1382:1390 <> Unnamed_thm
 R1387:1390 Coq.Init.Logic <> True ind
-R1470:1479 LF.Induction <> plus_assoc prfax
+R1470:1479 LF.Induction <> plus_assoc thm
 R1498:1500 Coq.Init.Datatypes <> nat ind
 R1514:1516 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R1504:1507 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
@@ -87,7 +87,7 @@ R1518:1520 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R1517:1517 LF.InductionTest <> n var
 R1521:1521 LF.InductionTest <> m var
 R1525:1525 LF.InductionTest <> p var
-R1470:1479 LF.Induction <> plus_assoc prfax
+R1470:1479 LF.Induction <> plus_assoc thm
 R1498:1500 Coq.Init.Datatypes <> nat ind
 R1514:1516 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R1504:1507 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
@@ -101,10 +101,10 @@ R1518:1520 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R1517:1517 LF.InductionTest <> n var
 R1521:1521 LF.InductionTest <> m var
 R1525:1525 LF.InductionTest <> p var
-R1577:1586 LF.Induction <> plus_assoc prfax
+R1577:1586 LF.Induction <> plus_assoc thm
 def 1589:1597 <> Unnamed_thm
 R1594:1597 Coq.Init.Logic <> True ind
-R1752:1762 LF.Induction <> double_plus prfax
+R1752:1762 LF.Induction <> double_plus thm
 R1777:1779 Coq.Init.Datatypes <> nat ind
 R1790:1792 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R1782:1787 LF.Induction <> double def
@@ -112,7 +112,7 @@ R1789:1789 LF.InductionTest <> n var
 R1794:1796 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R1793:1793 LF.InductionTest <> n var
 R1797:1797 LF.InductionTest <> n var
-R1752:1762 LF.Induction <> double_plus prfax
+R1752:1762 LF.Induction <> double_plus thm
 R1777:1779 Coq.Init.Datatypes <> nat ind
 R1790:1792 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R1782:1787 LF.Induction <> double def
@@ -120,11 +120,11 @@ R1789:1789 LF.InductionTest <> n var
 R1794:1796 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R1793:1793 LF.InductionTest <> n var
 R1797:1797 LF.InductionTest <> n var
-R1849:1859 LF.Induction <> double_plus prfax
+R1849:1859 LF.Induction <> double_plus thm
 def 1862:1870 <> Unnamed_thm
 R1867:1870 Coq.Init.Logic <> True ind
 R2081:2115 LF.Induction <> manual_grade_for_plus_comm_informal def
-R2266:2274 LF.Induction <> mult_comm prfax
+R2266:2274 LF.Induction <> mult_comm thm
 R2291:2293 Coq.Init.Datatypes <> nat ind
 R2301:2303 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R2297:2299 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
@@ -133,7 +133,7 @@ R2300:2300 LF.InductionTest <> n var
 R2305:2307 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
 R2304:2304 LF.InductionTest <> n var
 R2308:2308 LF.InductionTest <> m var
-R2266:2274 LF.Induction <> mult_comm prfax
+R2266:2274 LF.Induction <> mult_comm thm
 R2291:2293 Coq.Init.Datatypes <> nat ind
 R2301:2303 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R2297:2299 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
@@ -142,16 +142,16 @@ R2300:2300 LF.InductionTest <> n var
 R2305:2307 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
 R2304:2304 LF.InductionTest <> n var
 R2308:2308 LF.InductionTest <> m var
-R2360:2368 LF.Induction <> mult_comm prfax
+R2360:2368 LF.Induction <> mult_comm thm
 def 2371:2379 <> Unnamed_thm
 R2376:2379 Coq.Init.Logic <> True ind
 R2564:2594 LF.Induction <> manual_grade_for_binary_commute def
 R2799:2831 LF.Induction <> manual_grade_for_binary_inverse_a def
 R2957:2989 LF.Induction <> manual_grade_for_binary_inverse_b def
 R3115:3147 LF.Induction <> manual_grade_for_binary_inverse_c def
-R3998:4005 LF.Induction <> mult_0_r prfax
-R4066:4074 LF.Induction <> plus_n_Sm prfax
-R4135:4143 LF.Induction <> plus_comm prfax
-R4205:4214 LF.Induction <> plus_assoc prfax
-R4277:4287 LF.Induction <> double_plus prfax
-R4348:4356 LF.Induction <> mult_comm prfax
+R3998:4005 LF.Induction <> mult_0_r thm
+R4066:4074 LF.Induction <> plus_n_Sm thm
+R4135:4143 LF.Induction <> plus_comm thm
+R4205:4214 LF.Induction <> plus_assoc thm
+R4277:4287 LF.Induction <> double_plus thm
+R4348:4356 LF.Induction <> mult_comm thm
