@@ -449,9 +449,9 @@ R19494:19495 LF.IndProp <> ev ind
 R19499:19499 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R19498:19498 LF.AltAuto <> n var
 R19500:19500 LF.AltAuto <> n var
-R19581:19589 LF.Induction <> plus_comm prfax
-R19581:19589 LF.Induction <> plus_comm prfax
-R19581:19589 LF.Induction <> plus_comm prfax
+R19581:19589 LF.Induction <> plus_comm thm
+R19581:19589 LF.Induction <> plus_comm thm
+R19581:19589 LF.Induction <> plus_comm thm
 def 20140:20153 <> auto_example_1
 R20181:20181 Coq.Init.Logic <> ::type_scope:x_'->'_x not
 R20188:20192 Coq.Init.Logic <> ::type_scope:x_'->'_x not
@@ -769,9 +769,9 @@ R25776:25783 LF.IndProp <> le_trans prfax
 R25792:25793 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R25795:25795 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
 R25776:25783 LF.IndProp <> le_trans prfax
-R25888:25896 LF.Induction <> mult_comm prfax
-R25888:25896 LF.Induction <> mult_comm prfax
-R25888:25896 LF.Induction <> mult_comm prfax
+R25888:25896 LF.Induction <> mult_comm thm
+R25888:25896 LF.Induction <> mult_comm thm
+R25888:25896 LF.Induction <> mult_comm thm
 def 26713:26727 <> trans_example1'
 R26763:26771 Coq.Init.Logic <> ::type_scope:x_'->'_x not
 R26784:26791 Coq.Init.Logic <> ::type_scope:x_'->'_x not
@@ -794,9 +794,9 @@ R26760:26760 LF.AltAuto <> b var
 R26762:26762 LF.AltAuto <> c var
 R26840:26847 LF.IndProp <> le_trans prfax
 R26840:26847 LF.IndProp <> le_trans prfax
-R26907:26915 LF.Induction <> mult_comm prfax
-R26907:26915 LF.Induction <> mult_comm prfax
-R26907:26915 LF.Induction <> mult_comm prfax
+R26907:26915 LF.Induction <> mult_comm thm
+R26907:26915 LF.Induction <> mult_comm thm
+R26907:26915 LF.Induction <> mult_comm thm
 def 27881:27894 <> trans_example2
 R27930:27938 Coq.Init.Logic <> ::type_scope:x_'->'_x not
 R27951:27958 Coq.Init.Logic <> ::type_scope:x_'->'_x not

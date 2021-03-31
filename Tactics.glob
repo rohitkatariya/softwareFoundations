@@ -645,9 +645,9 @@ R26750:26750 LF.Tactics <> n var
 R26754:26759 LF.Tactics <> square def
 R26761:26761 LF.Tactics <> m var
 R27077:27082 LF.Tactics <> square def
-R27401:27410 LF.Induction <> mult_assoc prfax
-R27401:27410 LF.Induction <> mult_assoc prfax
-R27401:27410 LF.Induction <> mult_assoc prfax
+R27401:27410 LF.Induction <> mult_assoc thm
+R27401:27410 LF.Induction <> mult_assoc thm
+R27401:27410 LF.Induction <> mult_assoc thm
 R27436:27438 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R27432:27434 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
 R27428:27430 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
@@ -658,14 +658,14 @@ R27432:27434 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
 R27428:27430 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
 R27444:27446 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
 R27440:27442 Coq.Init.Peano <> ::nat_scope:x_'*'_x not
-R27465:27473 LF.Induction <> mult_comm prfax
-R27465:27473 LF.Induction <> mult_comm prfax
-R27465:27473 LF.Induction <> mult_comm prfax
-R27482:27491 LF.Induction <> mult_assoc prfax
-R27482:27491 LF.Induction <> mult_assoc prfax
-R27517:27526 LF.Induction <> mult_assoc prfax
-R27517:27526 LF.Induction <> mult_assoc prfax
-R27517:27526 LF.Induction <> mult_assoc prfax
+R27465:27473 LF.Induction <> mult_comm thm
+R27465:27473 LF.Induction <> mult_comm thm
+R27465:27473 LF.Induction <> mult_comm thm
+R27482:27491 LF.Induction <> mult_assoc thm
+R27482:27491 LF.Induction <> mult_assoc thm
+R27517:27526 LF.Induction <> mult_assoc thm
+R27517:27526 LF.Induction <> mult_assoc thm
+R27517:27526 LF.Induction <> mult_assoc thm
 def 27905:27907 <> foo
 R27913:27915 Coq.Init.Datatypes <> nat ind
 prf 28137:28148 <> silly_fact_1

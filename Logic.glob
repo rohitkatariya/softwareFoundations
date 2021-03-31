@@ -711,7 +711,7 @@ R28280:28280 LF.Logic <> m var
 R28285:28287 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R28284:28284 LF.Logic <> m var
 R28288:28288 LF.Logic <> n var
-R28246:28254 LF.Induction <> plus_comm prfax
+R28246:28254 LF.Induction <> plus_comm thm
 prf 29628:29637 <> plus_comm3
 R29668:29670 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R29658:29661 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
@@ -726,12 +726,12 @@ R29673:29675 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R29672:29672 LF.Logic <> z var
 R29676:29676 LF.Logic <> y var
 R29681:29681 LF.Logic <> x var
-R29978:29986 LF.Induction <> plus_comm prfax
-R29978:29986 LF.Induction <> plus_comm prfax
-R29978:29986 LF.Induction <> plus_comm prfax
-R29999:30007 LF.Induction <> plus_comm prfax
-R29999:30007 LF.Induction <> plus_comm prfax
-R29999:30007 LF.Induction <> plus_comm prfax
+R29978:29986 LF.Induction <> plus_comm thm
+R29978:29986 LF.Induction <> plus_comm thm
+R29978:29986 LF.Induction <> plus_comm thm
+R29999:30007 LF.Induction <> plus_comm thm
+R29999:30007 LF.Induction <> plus_comm thm
+R29999:30007 LF.Induction <> plus_comm thm
 prf 30289:30304 <> plus_comm3_take2
 R30335:30337 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R30325:30328 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
@@ -746,18 +746,18 @@ R30340:30342 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R30339:30339 LF.Logic <> z var
 R30343:30343 LF.Logic <> y var
 R30348:30348 LF.Logic <> x var
-R30384:30392 LF.Induction <> plus_comm prfax
-R30384:30392 LF.Induction <> plus_comm prfax
-R30384:30392 LF.Induction <> plus_comm prfax
+R30384:30392 LF.Induction <> plus_comm thm
+R30384:30392 LF.Induction <> plus_comm thm
+R30384:30392 LF.Induction <> plus_comm thm
 R30414:30416 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R30410:30412 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R30418:30420 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R30414:30416 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R30410:30412 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R30418:30420 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
-R30437:30445 LF.Induction <> plus_comm prfax
-R30437:30445 LF.Induction <> plus_comm prfax
-R30437:30445 LF.Induction <> plus_comm prfax
+R30437:30445 LF.Induction <> plus_comm thm
+R30437:30445 LF.Induction <> plus_comm thm
+R30437:30445 LF.Induction <> plus_comm thm
 prf 30704:30719 <> plus_comm3_take3
 R30750:30752 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R30740:30743 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
@@ -772,12 +772,12 @@ R30755:30757 Coq.Init.Peano <> ::nat_scope:x_'+'_x not
 R30754:30754 LF.Logic <> z var
 R30758:30758 LF.Logic <> y var
 R30763:30763 LF.Logic <> x var
-R30799:30807 LF.Induction <> plus_comm prfax
-R30799:30807 LF.Induction <> plus_comm prfax
-R30799:30807 LF.Induction <> plus_comm prfax
-R30821:30829 LF.Induction <> plus_comm prfax
-R30821:30829 LF.Induction <> plus_comm prfax
-R30821:30829 LF.Induction <> plus_comm prfax
+R30799:30807 LF.Induction <> plus_comm thm
+R30799:30807 LF.Induction <> plus_comm thm
+R30799:30807 LF.Induction <> plus_comm thm
+R30821:30829 LF.Induction <> plus_comm thm
+R30821:30829 LF.Induction <> plus_comm thm
+R30821:30829 LF.Induction <> plus_comm thm
 prf 31027:31036 <> in_not_nil
 R31056:31056 LF.Logic <> A var
 R31064:31067 LF.Poly <> list ind
@@ -864,9 +864,9 @@ R33113:33117 LF.Logic <> proj1 thm
 R33124:33133 LF.Logic <> In_map_iff prfax
 R33113:33117 LF.Logic <> proj1 thm
 R33124:33133 LF.Logic <> In_map_iff prfax
-R33185:33192 LF.Induction <> mult_0_r prfax
-R33185:33192 LF.Induction <> mult_0_r prfax
-R33185:33192 LF.Induction <> mult_0_r prfax
+R33185:33192 LF.Induction <> mult_0_r thm
+R33185:33192 LF.Induction <> mult_0_r thm
+R33185:33192 LF.Induction <> mult_0_r thm
 def 35082:35102 <> function_equality_ex1
 R35108:35108 Coq.Init.Logic <> ::type_scope:x_'='_x not
 R35123:35127 Coq.Init.Logic <> ::type_scope:x_'='_x not
@@ -910,8 +910,8 @@ R36596:36599 Coq.Init.Peano <> plus syndef
 R36603:36603 LF.Logic <> x var
 R36622:36646 LF.Logic <> functional_extensionality prfax
 R36622:36646 LF.Logic <> functional_extensionality prfax
-R36667:36675 LF.Induction <> plus_comm prfax
-R36667:36675 LF.Induction <> plus_comm prfax
+R36667:36675 LF.Induction <> plus_comm thm
+R36667:36675 LF.Induction <> plus_comm thm
 R37381:37401 LF.Logic <> function_equality_ex2 ex
 def 37955:37964 <> rev_append
 R37979:37982 LF.Poly <> list ind

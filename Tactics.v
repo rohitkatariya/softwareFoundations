@@ -15,7 +15,7 @@
 
 Set Warnings "-notation-overridden,-parsing".
 From LF Require Export Poly.
-
+ 
 (* ################################################################# *)
 (** * The [apply] Tactic *)
 
@@ -75,8 +75,9 @@ Theorem silly_ex :
      evenb 2 = true ->
      oddb 3 = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
-(** [] *)
+  intros. apply H. apply H0.
+Qed.
+  (** [] *)
 
 (** To use the [apply] tactic, the (conclusion of the) fact
     being applied must match the goal exactly -- for example, [apply]
@@ -111,7 +112,8 @@ Theorem rev_exercise1 : forall (l l' : list nat),
      l = rev l' ->
      l' = rev l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros. rewrite H. symmetry. apply rev_involutive. Qed.
+
 (** [] *)
 
 (** **** Exercise: 1 star, standard, optional (apply_rewrite) 
@@ -136,7 +138,7 @@ Example trans_eq_example : forall (a b c d e f : nat),
      [a;b] = [e;f].
 Proof.
   intros a b c d e f eq1 eq2.
-  rewrite -> eq1. rewrite -> eq2. reflexivity.  Qed.
+  rewrite -> eq1. apply eq2.  Qed.
 
 (** Since this is a common pattern, we might like to pull it out as a
     lemma that records, once and for all, the fact that equality is
@@ -145,8 +147,7 @@ Proof.
 Theorem trans_eq : forall (X:Type) (n m o : X),
   n = m -> m = o -> n = o.
 Proof.
-  intros X n m o eq1 eq2. rewrite -> eq1. rewrite -> eq2.
-  reflexivity.  Qed.
+  intros X n m o eq1 eq2. rewrite -> eq1. apply eq2.  Qed.
 
 (** Now, we should be able to use [trans_eq] to prove the above
     example.  However, to do this we need a slight refinement of the
@@ -193,7 +194,7 @@ Example trans_eq_exercise : forall (n m o p : nat),
      (n + p) = m ->
      (n + p) = (minustwo o).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.  transitivity m. apply H0. apply H. Qed.
 (** [] *)
 
 (* ################################################################# *)
@@ -233,8 +234,8 @@ Theorem S_injective : forall (n m : nat),
   n = m.
 Proof.
   intros n m H1.
-  assert (H2: n = pred (S n)). { reflexivity. }
-  rewrite H2. rewrite H1. reflexivity.
+  assert (H2: n = pred (S n)). {simpl. reflexivity. }
+  rewrite H2. rewrite H1. simpl. reflexivity.
 Qed.
 
 (** This technique can be generalized to any constructor by
@@ -255,7 +256,7 @@ Proof.
     injectivity of constructors (in the present example, the equation
     [n = m]). Each such equation is added as a hypothesis (with the
     name [Hmn] in this case) into the context. *)
-
+ 
   injection H as Hnm. apply Hnm.
 Qed.
 
@@ -269,7 +270,8 @@ Proof.
   intros n m o H.
   (* WORKED IN CLASS *)
   injection H as H1 H2.
-  rewrite H1. rewrite H2. reflexivity.
+  transitivity [o].
+  rewrite H1. reflexivity. rewrite H2. reflexivity.
 Qed.
 
 (** Alternatively, if you just say [injection H] with no [as] clause,
@@ -292,7 +294,9 @@ Example injection_ex3 : forall (X : Type) (x y z : X) (l j : list X),
   j = z :: l ->
   x = y.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros. injection H as H1 H2. rewrite H1. replace  j with (y :: l ) in H0. injection H0 as H3. symmetry. apply H3.
+Qed.
+
 (** [] *)
 
 (** So much for injectivity of constructors.  What about disjointness?
@@ -366,8 +370,8 @@ Example discriminate_ex3 :
     x :: y :: l = [] ->
     x = z.
 Proof.
-  (* FILL IN HERE *) Admitted.
-(** [] *)
+  intros.
+    discriminate H. Qed.
 
 (** The injectivity of constructors allows us to reason that
     [forall (n m : nat), S n = S m -> n = m].  The converse of this
@@ -392,7 +396,7 @@ Proof. intros n m H. apply f_equal. apply H. Qed.
 
 Theorem eq_implies_succ_equal' : forall (n m : nat),
     n = m -> S n = S m.
-Proof. intros n m H. f_equal. apply H. Qed.
+Proof. intros n m H. f_equal. apply H. Qed. 
 
 (* ################################################################# *)
 (** * Using Tactics on Hypotheses *)
@@ -599,8 +603,14 @@ Proof.
 (** **** Exercise: 2 stars, standard (eqb_true)  *)
 Theorem eqb_true : forall n m,
     n =? m = true -> n = m.
-Proof.
-  (* FILL IN HERE *) Admitted.
+Proof. intros n. induction n.
+  * intros m. induction m. 
+    -reflexivity.
+     - discriminate.
+  * intros m2.  induction m2.
+    - intros. discriminate. 
+    - intros.   inversion H . apply IHn in H1. f_equal. apply H1.
+Qed.
 (** [] *)
 
 (** **** Exercise: 2 stars, advanced (eqb_true_informal) 
@@ -608,11 +618,24 @@ Proof.
     Give a careful informal proof of [eqb_true], being as explicit
     as possible about quantifiers. *)
 
-(* FILL IN HERE *)
+(* Thm: n =? m = true -> n = m.
+  induction n 
+    n=0 
+      induction m
+        m=0
+        => 0 =? m is true  so n = m
+      m =S m' => 0 = Sm' can never be true
+    we have P n = proven    
+    prove P S n'
+     
+    
+ *)
 
 (* Do not modify the following line: *)
 Definition manual_grade_for_informal_proof : option (nat*string) := None.
 (** [] *)
+
+Check plus_n_Sm. 
 
 (** **** Exercise: 3 stars, standard, especially useful (plus_n_n_injective) 
 
@@ -622,7 +645,18 @@ Theorem plus_n_n_injective : forall n m,
      n + n = m + m ->
      n = m.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n.
+    induction n.
+    - simpl. intros. induction m.
+    -- reflexivity.
+    -- discriminate.
+    - simpl. rewrite plus_comm. rewrite plus_n_Sm. intros.
+      induction m.
+      -- discriminate.
+      -- simpl in H. 
+          injection H as Hnew. rewrite <- plus_n_Sm in Hnew. rewrite <- plus_n_Sm in Hnew.
+           injection Hnew as Hnew'. apply IHn in Hnew'.
+          f_equal. apply Hnew'. Qed.
 (** [] *)
 
 (** The strategy of doing fewer [intros] before an [induction] to
@@ -678,8 +712,8 @@ Proof.
     + (* n = S n' *) discriminate eq.
   - (* m = S m' *) intros n eq. destruct n as [| n'] eqn:E.
     + (* n = O *) discriminate eq.
-    + (* n = S n' *) apply f_equal.
-      apply IHm'. injection eq as goal. apply goal. Qed.
+    + (* n = S n' *) apply f_equal. injection eq as a.
+      apply IHm' in a.  apply a. Qed.
 
 (** Let's look at an informal proof of this theorem.  Note that
     the proposition we prove by induction leaves [n] quantified,
@@ -729,7 +763,13 @@ Theorem nth_error_after_last: forall (n : nat) (X : Type) (l : list X),
      length l = n ->
      nth_error l n = None.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n X l. generalize dependent n. 
+  induction l. 
+    -simpl. reflexivity.
+    - intros n H. simpl in H . rewrite <- H . 
+      simpl. apply IHl. reflexivity. Qed.  
+
+  
 (** [] *)
 
 (* ################################################################# *)
@@ -851,8 +891,8 @@ Proof.
     proof without thinking too hard. *)
 
   destruct m eqn:E.
-  - reflexivity.
-  - reflexivity.
+  - simpl. reflexivity.
+  - simpl. reflexivity.
 Qed.
 
 (* ################################################################# *)
@@ -914,7 +954,11 @@ Theorem combine_split : forall X Y (l : list (X * Y)) l1 l2,
   split l = (l1, l2) ->
   combine l1 l2 = l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros X Y l.
+  induction l as [| p l' IHl'].
+  - intros. injection H as H1 H2. rewrite  <- H1. simpl. reflexivity.
+  - intros. simpl in H. destruct p. destruct (split l'). inversion H. simpl. f_equal. rewrite IHl'. reflexivity. reflexivity.
+   Qed.
 (** [] *)
 
 (** The [eqn:] part of the [destruct] tactic is optional: So far,
@@ -960,7 +1004,7 @@ Abort.
     [n =? 3], but at the same time add an equation to the context that
     records which case we are in.  This is precisely what the [eqn:]
     qualifier does. *)
-
+Check eqb_true.
 Theorem sillyfun1_odd : forall (n : nat),
      sillyfun1 n = true ->
      oddb n = true.
@@ -989,9 +1033,20 @@ Theorem bool_fn_applied_thrice :
   forall (f : bool -> bool) (b : bool),
   f (f (f b)) = f b.
 Proof.
-  (* FILL IN HERE *) Admitted.
-(** [] *)
-
+  intros . destruct b eqn:Hb.
+  - destruct (f true) eqn:H.
+    * rewrite H. apply H.
+    * destruct (f false) eqn:H2.
+      ** apply H.
+      ** apply H2.
+  - destruct (f false) eqn:Hf.
+     * destruct (f true) eqn: Ht.
+        ** apply Ht.
+        ** apply Hf.
+     * rewrite Hf. apply Hf.
+    Qed.
+  
+  
 (* ################################################################# *)
 (** * Review *)
 

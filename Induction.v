@@ -706,7 +706,9 @@ Qed.
 Theorem eqb_refl : forall n : nat,
   true = (n =? n).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n. induction n. simpl. reflexivity.
+  simpl. rewrite <- IHn. reflexivity. Qed.
+
 (** [] *)
 
 (** **** Exercise: 2 stars, standard, optional (plus_swap') 
@@ -723,7 +725,12 @@ Proof.
 Theorem plus_swap' : forall n m p : nat,
   n + (m + p) = m + (n + p).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros. rewrite plus_comm. replace (n+p) with (p+n). 
+  - rewrite plus_assoc. reflexivity. 
+  - rewrite plus_comm. reflexivity.
+Qed.
+
+
 (** [] *)
 
 (** **** Exercise: 3 stars, standard, especially useful (binary_commute) 
